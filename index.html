@@ -161,12 +161,13 @@
             }
         }
 
-        function namereplace(combatant, index) {
-            if (combatant["name"] === "YOU") {
-                combatant["name"] = combatant["name"].replace("YOU" , myname );
-            }
-            return combatant["name"];
+    function namereplace(combatant, index, myname) {
+        if (combatant["name"].includes("YOU")) {
+        combatant["name"] = combatant["name"].replace("YOU", myname);
         }
+        return combatant["name"];
+    }
+
 
         //
         // 以下表示用スクリプト
